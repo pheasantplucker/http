@@ -13,5 +13,5 @@ npm version patch
 echo 'updated patch version'
 
 # Deploy to NPM
-npm publish
+npm publish --access public
 echo 'publish complete'
