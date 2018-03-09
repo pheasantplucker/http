@@ -1,0 +1,34 @@
+{
+  "name": "@pheasantplucker/http",
+  "version": "1.0.0",
+  "description": "HTTP wrapper using failables",
+  "main": "src/http.js",
+  "scripts": {
+    "test": "jest ./src/*.spec.js --forceExit",
+    "lint": "esw .eslintrc.js src/ lib/ tests/ -w --fix --ignore-pattern !.eslintrc.js",
+    "deploy": "./deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pheasantpluckers/http.git"
+  },
+  "keywords": [
+    "javascript",
+    "node"
+  ],
+  "author": "cgdibble@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-plugin-jest": "^21.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-watch": "^3.1.3",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.4",
+    "prettier-eslint": "^8.2.1"
+  },
+  "dependencies": {
+    "@pheasantplucker/failables": "^2.0.4",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
