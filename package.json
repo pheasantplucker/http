@@ -1,12 +1,13 @@
 {
   "name": "@pheasantplucker/http",
-  "version": "1.0.2",
-  "description": "HTTP wrapper using failables",
-  "main": "src/http.js",
+  "version": "1.0.3",
+  "description": "HTTP wrapper using failables for node 6.11.0",
+  "main": "build/http.js",
   "scripts": {
-    "test": "jest ./src/*.spec.js --forceExit",
+    "test": "jest --forceExit",
     "lint": "esw .eslintrc.js src/ lib/ tests/ -w --fix --ignore-pattern !.eslintrc.js",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "build": "babel src --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,9 @@
     "prettier-eslint": "^8.2.1"
   },
   "dependencies": {
-    "@pheasantplucker/failables": "^2.0.4",
+    "@pheasantplucker/failables-node6": "^2.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "isomorphic-fetch": "^2.2.1"
   }
 }

@@ -1,4 +1,4 @@
-const { success, failure } = require(`@pheasantplucker/failables`)
+const { success, failure } = require(`@pheasantplucker/failables-node6`)
 const fetch = require('isomorphic-fetch')
 
 const get = async (url, type = 'text') => {

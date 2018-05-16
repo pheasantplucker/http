@@ -1,4 +1,4 @@
-const { success } = require(`@pheasantplucker/failables`)
+const { success } = require(`@pheasantplucker/failables-node6`)
 const http = require('http')
 
 const PORT = 9000
