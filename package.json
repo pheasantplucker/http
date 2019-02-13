@@ -1,6 +1,6 @@
 {
   "name": "@pheasantplucker/http",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "HTTP wrapper using failables",
   "main": "src/http.js",
   "scripts": {
