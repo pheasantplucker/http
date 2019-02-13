@@ -16,6 +16,10 @@ const server = http.createServer((req, res) => {
         res.write(JSON.stringify(data))
         break
       }
+      case `/notfound`: {
+        res.statusCode = 404
+        break
+      }
     }
     res.end()
   }
@@ -32,6 +36,9 @@ const server = http.createServer((req, res) => {
           res.end()
         })
         break
+      case `/notfound`:
+        res.statusCode = 404
+        res.end()
       default:
     }
   }

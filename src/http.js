@@ -4,8 +4,12 @@ const fetch = require('isomorphic-fetch')
 const get = async (url, type = 'text') => {
   try {
     const fetchResult = await fetch(url)
+    const { status, statusText } = fetchResult
+    if (status > 400) {
+      return failure(statusText, { status })
+    }
     const data = await fetchResult[type]()
-    return success(data)
+    return success(data, { status })
   } catch (err) {
     return failure(err.toString())
   }
@@ -29,8 +33,12 @@ const post = async (url, data) => {
   const options = makePostOptions(data)
   try {
     const fetchResult = await fetch(url, options)
+    const { status, statusText } = fetchResult
+    if (status > 400) {
+      return failure(statusText, { status })
+    }
     const jsonData = await fetchResult.json()
-    return success(jsonData)
+    return success(jsonData, { status })
   } catch (err) {
     return failure(err.toString())
   }
